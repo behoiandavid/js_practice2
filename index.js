@@ -1249,7 +1249,7 @@
 
 
 // alert(calcMath(numberOne, secondNumber, operator))
-// 
+//
 
 
 
@@ -1292,60 +1292,759 @@
 
 
 
-alert("Добро пожаловать!");
-let userName = prompt("Какое ваше имя?");
-let userAge = Number(prompt("Какой ваш возраст?"));
-let favoriteNumber = Number(prompt("Какое ваше любимое число?"));
+// alert("Добро пожаловать!");
+// let userName = prompt("Какое ваше имя?");
+// let userAge = Number(prompt("Какой ваш возраст?"));
+// let favoriteNumber = Number(prompt("Какое ваше любимое число?"));
 
-if (userAge < 18) {
-    let agree = confirm("Можно ли продолжить?");
-    if (!agree) {
-        alert("Выход")
-        throw new Error("Пользователь не был согласен!")
-    };
-};
+// if (userAge < 18) {
+//     let agree = confirm("Можно ли продолжить?");
+//     if (!agree) {
+//         alert("Выход")
+//         throw new Error("Пользователь не был согласен!")
+//     };
+// };
 
-const user = {
-    name: "David",
-    age: 17,
-    luckyNumber: 7,
-    registered: new Date(),
-    userID: Symbol(123124324),
+// const user = {
+//     name: "David",
+//     age: 17,
+//     luckyNumber: 7,
+//     registered: new Date(),
+//     userID: Symbol(123124324),
 
-    greet() {
-        alert(`Привет, я ${this.name}`)
-    },
+//     greet() {
+//         alert(`Привет, я ${this.name}`)
+//     },
 
-    rateNumber() {
-        this.luckyNumber < 0 ? alert("Число отрицательное") :
-            this.luckyNumber <= 10 ? alert("Маловато") :
-                this.luckyNumber <= 100 ? alert("Нормально") :
-                    alert("Многовато");
-    }
-};
-let users = [];
-for (let i = 0; i < 3; i++) {
-    let userName = prompt("Какое ваше имя?");
-    let userAge = Number(prompt("Какой ваш возраст?"));
-    let favoriteNumber = Number(prompt("Какое ваше любимое число?"));
-    let userObj = {
-        name: userName,
-        age: userAge,
-        luckyNumber: favoriteNumber,
-        registered: new Date(),
-        userID: Symbol(`${userName}- ${userAge}`),
+//     rateNumber() {
+//         this.luckyNumber < 0 ? alert("Число отрицательное") :
+//             this.luckyNumber <= 10 ? alert("Маловато") :
+//                 this.luckyNumber <= 100 ? alert("Нормально") :
+//                     alert("Многовато");
+//     }
+// };
+// let users = [];
+// for (let i = 0; i < 3; i++) {
+//     let userName = prompt("Какое ваше имя?");
+//     let userAge = Number(prompt("Какой ваш возраст?"));
+//     let favoriteNumber = Number(prompt("Какое ваше любимое число?"));
+//     let userObj = {
+//         name: userName,
+//         age: userAge,
+//         luckyNumber: favoriteNumber,
+//         registered: new Date(),
+//         userID: Symbol(`${userName}- ${userAge}`),
 
-        showInfo() {
-            alert(`Меня зовут ${this.name}, мне ${this.age}, мое любимое число ${this.luckyNumber}`)
-        },
-    };
+//         showInfo() {
+//             alert(`Меня зовут ${this.name}, мне ${this.age}, мое любимое число ${this.luckyNumber}`)
+//         },
+//     };
 
-    users.push(userObj)
-};
-console.log(users);
-for (let i in users) {
-    users[i].showInfo();
-};
+//     users.push(userObj)
+// };
+// let person = {
+//     name: "David",
+//     age: 17,
+//     sayHello() {
+//         alert(`Привет, меня зовут ${this.name}`)
+//     },
+// };
+// let users = [
+//     { name: "Анна", age: 22 },
+//     { name: "Максим", age: 17 },
+//     { name: "Оля", age: 19 },
+// ]
+// for (let user of users) {
+//     if (user.age > 18) {
+//         alert(`Добро пожаловать ${user.name}`)
+//     }
+// }
+// let products = [
+//     { name: "Кофе", price: 300, category: "напитки" },
+//     { name: "Чай", price: 150, category: "напитки" },
+//     { name: "Печенье", price: 100, category: "сладости" },
+//     { name: "Шоколад", price: 200, category: "сладости" },
+//     { name: "Молоко", price: 50, category: "напитки" },
+// ]
+// let totalPrice = 0
+// for (let product of products) {
+//     if (product.category === "напитки") {
+//         console.log(product.name)
+//         totalPrice += product.price;
+//     };
+// };
+// console.log("Общая цена напитков " + totalPrice)
+// let products = [
+//     { name: "Кофе", price: 300, category: "напитки" },
+//     { name: "Чай", price: 150, category: "напитки" },
+//     { name: "Печенье", price: 100, category: "сладости" },
+//     { name: "Шоколад", price: 200, category: "сладости" },
+//     { name: "Молоко", price: 50, category: "напитки" },
+// ]
+// let totalPrice = 0;
+// for (let product of products) {
+//     if (product.category === "сладости") {
+//         console.log(product.name);
+//         totalPrice += product.price
+//     };
+// };
+// console.log("Общая цена сладостей " + totalPrice);
+// let result = "";
+// for (let i = 1; i <= 10; i++) {
+//     if (i % 2 === 0) {
+//         result += `${i} - Четное\n`;
+//     } else {
+//         result += `${i} - Нечетное\n`;
+//     }
+// }
+// alert(result);
+// alert("Midget".includes("id", 1))
+// let str = '';
+// for (let i = 65; i <= 220; i++) {
+//     str += String.fromCodePoint(i);
+// }
+// alert(str);
+// // ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+// // ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ
+// let newstr = str[0].toUpperCase() + str.slice(1);
+// console.log(newstr)
+// function checkSpam(str) {
+//     let check = str.toLowerCase()
+//     if (check.includes("viagra") || check.includes("xxx")) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// console.log(checkSpam("buy ViAgRA now"));
+// console.log(checkSpam("free xxxxx"));
+// console.log(checkSpam("innocent rabbit"));
+
+
+
+// function truncate(str, maxlenght) {
+//     if (str.length > maxlenght) {
+//         return str.slice(0, maxlenght - 3) + "...";
+//     };
+//     return str
+// };
+// alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 22))
+// alert(truncate("Всем привет!", 20))
+// function extractCurrencyValue(str) {
+//     let check = str.slice(1)
+//     return Number(check)
+// };
+
+// alert(extractCurrencyValue('$120'));
+
+
+
+// function Person(name, age, adress) {
+//     this.name = name ?? "Guest";
+//     this.age = age ?? "IDK";
+//     this.adress = adress ?? "Unknown"
+
+
+// }
+
+// let num = 12.34;
+// alert(num.toFixed(1));
+
+// let num2 = 0.1 + 0.3;
+
+// alert(num2.toFixed(0))
+
+// alert((0.1 + 0.2).toFixed(1))
+
+
+// let number1 = Number(prompt("first num"));
+// let number2 = Number(prompt("second num"));
+
+// alert(number1 + number2)
+
+
+
+// alert(Math.round(6.35 * 10) / 10);
+
+// function readNumber() {
+//     let checkNumber;
+//     do {
+//         checkNumber = prompt("Введите число!")
+//         if (checkNumber === null || checkNumber === "") {
+//             return null
+//         }
+//     } while (isNaN(+checkNumber))
+//     return (`Вы ввели ${+checkNumber}!`)
+// };
+// alert(readNumber())
+// function random(min, max) {
+//     return Math.random() * (max - min) + min;
+// }
+// alert(random(1, 5));
+// function randomInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min) + min);
+// }
+// alert(randomInteger(1, 5)); // 1
+// alert(randomInteger(1, 5)); // 3
+// alert(randomInteger(1, 5)); // 5
+// function checkSpam(str) {
+//     let lowerStr = str.toLowerCase()
+
+//     if (lowerStr.includes("viagra") || lowerStr.includes("xxx")) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// alert(checkSpam('buy ViAgRA now'));
+// alert(checkSpam('free xxxxx'));
+// alert(checkSpam("innocent rabbit"));
+// function truncate(str, maxlength) {
+//     if (str.length < maxlength) {
+//         return str;
+//     }
+//     return str.slice(0, maxlength - 3) + "..."
+// };
+// console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 22));
+// // 👉 "Вот, что мне хотело..."
+// console.log(truncate("Всем привет!", 20));
+// function extractCurrencyValue(str) {
+//     return Number(str.slice(1))
+// };
+// alert(extractCurrencyValue('$120') === 120); // true
+// console.log(extractCurrencyValue("$120")); // 120
+// console.log(extractCurrencyValue("$999")); // 999
+
+// function getLastChar(str) {
+//     return str[str.length - 1]
+// }
+// console.log(getLastChar("Hello")); // Oжидаемый результат: "o"
+// console.log(getLastChar("World")); // Oжидаемый результат: "d"
+// function findFirstA(str) {
+//     return str.indexOf("a")
+// }
+// console.log(findFirstA("banana"));     // 1
+// console.log(findFirstA("cherry"));     // -1
+// console.log(findFirstA("Applesauce")); // -1 (если регистр важен)
+// function startsWithJava(str) {
+//     return str.startsWith("Java")
+// }
+// console.log(startsWithJava("JavaScript"))  // true
+// console.log(startsWithJava("java"))       // false
+// console.log(startsWithJava("Python"))     // false
+// console.log(startsWithJava("Java"))       // true
+// function isLongString(str) {
+//     return str.length > 10
+// }
+// console.log(isLongString("short"));            // false
+// console.log(isLongString("this is long!"));    // true
+// console.log(isLongString("JavaScript"));       // true
+// console.log(isLongString("hi"));               // false
+// function repeat3Times(str) {
+//     return str.repeat(3)
+// }
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
+// alert(matrix[1][1]); // 5, центральный элемент
+// let styles = ["Джаз", "Блюз"]
+// styles.push("Рок-н-ролл")
+// styles[Math.floor((styles.length - 1) / 2)] = "Классика"
+// styles.shift(1)
+// styles.unshift("Рэп", "Регги ")
+// alert(styles)
+// function sumInput() {
+//     let num = []
+//     while (true) {
+//         let value = prompt("Введите значения!")
+//         if (value === null) {
+//             break;
+//         } else if (value === '' || isNaN(Number(value))) {
+//             break;
+//         } else {
+//             num.push(Number(value))
+//         }
+//     }
+//     let sum = num.reduce((acc, current) => acc + current, 0)
+//     return sum;
+// }
+// function checkStringAndNumber(str, num) {
+//     return {
+//         string: str === toUpperCase(str),
+//         number: num === Number.isInteger(num)
+//     };
+// }
+// function mathOperations(num1, num2) {
+//     let result = num1 + num2
+//     return {
+//         firstoperation: result,
+//         secondoperation: Math.floor(result),
+//         firdoperation: Math.random() + result
+//     }
+// }
+// console.log(mathOperations(5, 3));
+// function calcSum(sum) {
+//     return [
+//         sum.reduce((acc, curr) => acc + curr, 0),
+//         sum.reduce((acc, curr) => acc + curr, 0) / sum.length,
+//         Math.max(...sum)
+//     ]
+// }
+// let arr = [1, 2, 3, 4, 5];  // пример массива
+// console.log(calcSum(arr));
+// function calcStats(arr) {
+//     return [
+//         arr.reduce((acc, curr) => acc + curr, 0),
+//         arr.reduce((acc, curr) => acc + curr, 0) / arr.length,
+//         Math.max(...arr)
+//     ]
+// }
+// function filterAndCalc(arr) {
+//     const filteredArray = arr.filter(arr => arr > 20);
+//     const sum = filteredArray.reduce((acc, curr) => acc + curr, 0)
+//     const avarage = sum / filteredArray.length;
+//     const max = Math.max(...filteredArray);
+//     return [sum, avarage, max]
+// }
+// console.log(filterAndCalc([10, 25, 35, 15, 50])); // [110, 36.67, 50
+// let num = 12;
+// let string = "Hello"
+// let boolean = false
+// let biglnt = 2e2;
+// console.log(typeof (num))
+// console.log(typeof (string))
+// console.log(typeof (boolean))
+// console.log(typeof (biglnt))
+// num = String("12")
+// string = Number("Hello")
+// console.log(typeof (num))
+// console.log(typeof (string))
+// let person = prompt("Скажите ваше имя!", " ");
+// if (person) {
+//     alert(`Здравствуйте! ${person}`)
+// }
+// let personNumber = Number(prompt("Скажите пожалуйста ваше число!"))
+// alert(personNumber ** 2)
+// let now = new Date();
+// console.log(now.getHours()); // часы
+// console.log(now.getMinutes()); // минуты
+// console.log(now.getSeconds()); // секунды
+// let users = [
+//     { id: 0, name: "David" },
+//     { id: 1, name: "Вася" },
+//     { id: 2, name: "Петя" },
+//     { id: 3, name: "Маша" }
+// ];
+// let user = users.find(item => item.id == 0);
+// alert(user.name); // Вася
+// let users = [
+//     { id: 1, name: "Вася" },
+//     { id: 2, name: "Петя" },
+//     { id: 3, name: "Маша" },
+//     { id: 4, name: "Вася" }
+// ];
+// // Найти индекс первого Васи
+// alert(users.findIndex(user => user.id == 1)); // 0
+// // Найти индекс последнего Васи
+// alert(users.findIndex(user => user.name == 'Вася')); // 3
+// let users = [
+//     { id: 1, name: "Вася" },
+//     { id: 2, name: "Петя" },
+//     { id: 3, name: "Маша" }
+// ];
+// let someUsers = users.filter(item => item.id < 2);
+// alert(someUsers.length);
+// function compareNumeric(a, b) {
+//     if (a > b) return 1;
+//     if (a == b) return 0;
+//     if (a < b) return -1;
+// }
+// let arr = [1, 16, 15, 2, 3, 4, 5, 6, 7, 10, 8, 9, 11, 13, 12, 14, 17];
+// arr.reverse(compareNumeric);
+// alert(arr);  // 1, 2, 15
+// let names = 'Вася, Петя, Маша';
+// let arr = names.split(', ');
+// for (let name of arr) {
+//     alert(`Сообщение получат: ${name}`)
+// }
+// let persons = ["David", "Daria", "Anastasia", "Roma"]
+// let name = persons.join(";")
+// alert(name)
+// function camelize(str) {
+//     let words = str.split("-")
+//     let result = words.map((word, index) => {
+//         if (index === 0) {
+//             return word
+//         } else if (index !== 0) {
+//             return word[0].toUpperCase() + word.slice(1)
+//         }
+//     })
+//     return result.join("")
+// }
+// console.log(camelize("background-color")); // 'backgroundColor'
+// console.log(camelize("list-style-image")); // 'listStyleImage'
+// console.log(camelize("-webkit-transition")); // 'WebkitTransition'
+// function filterRanger(arr, a, b) {
+//     return arr.filter((item) => (a => item && item <= b))
+// }
+// let arr = [5, 3, 8, 1];
+// let filtered = filterRanger(arr, 1, 4);
+// alert(filtered); // 3,1 (совпадающие значения)
+// alert(arr); // 5,3,8,1 (без изменений)
+// function filterRangeInPlace(arr, a, b) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < a || arr[i] > b) {
+//             arr.splice(i, 1)
+//             i--;
+//         }
+//     }
+// }
+// let arr = [5, 3, 8, 1];
+// filterRangeInPlace(arr, 1, 4);
+// console.log(arr); // [3, 1]\
+// let arr = [5, 2, 1, -10, 8];
+// arr.sort((a, b) => b - a)
+// alert(arr); // 8, 5, 2, 1, -10
+// function copySorted(arr) {
+//     let copiedObj = arr.slice()
+//     return copiedObj.sort()
+// }
+// let arr = ["HTML", "JavaScript", "CSS"];
+// let sorted = copySorted(arr);
+// alert(sorted); // CSS, HTML, JavaScript
+// alert(arr); // HTML, JavaScript, CSS (без изменений)
+// function Calculator() {
+//     this.methods = {
+//         "-": (a, b) => a - b,
+//         "+": (a, b) => a + b
+//     };
+//     this.calculate = function (str) {
+//         let split = str.split(' '),
+//             a = +split[0],
+//             op = split[1],
+//             b = +split[2]
+//         if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+//             return NaN;
+//         }
+//         return this.methods[op](a, b);
+//     }
+//     this.addMethod = function (name, func) {
+//         this.methods[name] = func;
+//     };
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let name = "David"
+// alert(name)
+// let age = 17;
+// let isStudent = "David"
+// alert(`${isStudent}: ${age}`)
+// alert(typeof (null))
+// let yourName = prompt("Ваше имя", '')
+// alert(`Здравствуйте ${yourName}`)
+// let student = confirm("Ты студент?")
+// alert(student)
+// let number = "123";
+// number = Number("123")
+// console.log(typeof (number))
+// console.log(Boolean(0), Boolean("0"), Boolean(""), Boolean(" "));
+// alert("5" - 3)
+// let age = Math.random() * 50
+// console.log(age)
+// if (age < 18) {
+//     alert("Молодой ")
+// } else {
+//     alert("Взрослый")
+// }
+// function unique(arr) {
+//     let check = new Set(arr)
+//     return Array.from(check)
+// }
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+// alert(unique(values)); // Hare,Krishna,:-O
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+// alert(aclean(arr));
+// function aclean(arr) {
+//     let check = new Map()
+//     for (let check2 of arr) {
+//         let key = check2
+//             .toLowerCase()
+//             .split('')
+//             .sort()
+//             .join('')
+//         check.set(key, check2)
+//     }
+//     return Array.from(check.values())
+// }
+// let map = new Map();
+// map.set("name", "John");
+// let keys = Array.from(map.keys());
+// keys.push("more");
+// console.log(keys)
+// let readMa = new WeakMap()
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+// };
+// function sumSalaries(salaries) {
+//     let values = Object.values(salaries)
+//     let sum = 0
+//     for (let check of values) {
+//         sum += check
+//     }
+//     return sum
+// }
+// alert(sumSalaries(salaries));
+// let user = {
+//     name: 'John',
+//     age: 30
+// };
+// function count(obj) {
+//     return Object.keys(obj).length
+// }
+// alert(count(user)); // 2
+// function roundToTwo(num) {
+//     let number = num.toFixed(2)
+//     return number
+// }
+// alert(roundToTwo(54))
+// if ("яблоко" > "Яблоко") {
+//     alert("Good")
+// } else {
+//     alert("Bad")
+// }
+// function roundUp(num) {
+//     let number = Math.round(num)
+//     return number
+// }
+// alert(roundUp(2.6
+// function reversoString(str) {
+//     let string = (str.split('').reverse().join(''))
+//     return string
+// }
+// alert(reversoString("sdfsdf"))
+// function ucFirst(str) {
+//     let upper = (str.charAt(0).toUpperCase() + str.slice(1))
+//     return upper
+// }
+// alert(ucFirst("hello"))
+// function lastElement(arr) {
+//     let last = arr[arr.length - 1]
+//     return last
+// }
+// console.log(lastElement([1, 2, 3, 4]));
+// console.log(lastElement(["apple", "banana", "cherry"]));
+// console.log(lastElement([true, false, true]));
+// function deleteFirstAndLast(arr) {
+//     arr.shift();
+//     arr.pop()
+//     return arr
+// };
+// console.log(deleteFirstAndLast([1, 2, 3, 4, 4, 5, 5, 6, 4]));
+// function sumArray(arr) {
+//     let result = 0
+//     for (let check of arr) {
+//         result += check
+//     }
+//     return result
+// }
+// console.log(sumArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]));
+// function calcArray(arr) {
+//     let filter = arr.filter((arr) => arr > 10)
+//     return filter
+// }
+// console.log(calcArray([5, 12, 8, 130, 44])); // [12, 130, 44]
+// let person = {
+//     name: "David",
+//     age: 17,
+//     weight: 65,
+//     rise: 178,
+// }
+// for (let [key, array] of
+//     Object.entries(person)) {
+//     console.log(key, array)
+// }
+// function tubArray(arr) {
+//     return Array.from(new Set(arr))
+// }
+// let translate = new Map([
+//     ["apple", "яблоко"],
+//     ["car", "машина"],
+// ])
+// console.log(translate.get("apple"))
+// let user = {
+//     name: "David",
+//     age: 17,
+// }
+// let visits = new WeakMap()
+// visits.set(user, new Date())
+// let lastVisits = visits.get(user)
+// console.log(lastVisits)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let number = 17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
